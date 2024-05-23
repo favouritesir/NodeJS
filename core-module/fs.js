@@ -24,4 +24,5 @@ fs.writeFileSync("./files_by_fs_module/3rd.txt","ma-shaAllah 3rd file is created
 console.log("3rd: "+fs.readFileSync("./files_by_fs_module/3rd.txt"));
 // append 2nd file
 fs.appendFileSync("./files_by_fs_module/3rd.txt","ma-shaAllah 3rd file is append and update");
-console.log("3rd append: "+fs.readFileSync("./files_by_fs_module/3rd.txt"));
+let data=fs.readFileSync("./files_by_fs_module/3rd.txt");//return buffer
+console.log("3rd append: "+ data.toString());
