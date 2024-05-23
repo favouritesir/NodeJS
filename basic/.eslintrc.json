@@ -14,3 +14,18 @@
 	},
 	"plugins": ["prettier"]
 }
+
+/* command for dev dependecies
+yarn add -D eslint prettier
+npx install-peerdeps --dev eslint-config-airbnb-base
+yarn add -D eslint-config-prettier eslint-plugin-prettier
+
+
+## Extensions ##
+Install the below extensions:
+
+=> ESLint
+=> Prettier
+=> Path Autocomplete
+
+*/
