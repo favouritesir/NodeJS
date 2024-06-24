@@ -7,7 +7,7 @@
 */
 // Dependencies
 const http = require('http');
-const url = require('url');
+const {handleReq} = require('./handler')
 
 // App object - Module scaffolding
 const app = {};
@@ -19,16 +19,10 @@ app.config = {
 
 // create app method
 app.createApp=()=>{
-    const server=http.createServer(app.handleReq)
+    const server=http.createServer(handleReq)
     server.listen(app.config.port);
 } 
 
-// handler for request
-app.handleReq=(req,res)=>{
-    const parseUrl=url.parse(req.url,true);
-    const path=parseUrl.pathname.replace(/^\/+|\/+$/g,'')
-    res.end("Alhamdulillah");
-}
 
 // run the method
 app.createApp();
