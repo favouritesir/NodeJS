@@ -5,8 +5,13 @@
 * Date: Monday, 24 -June-2024 (16:01:00)
 *
 */
-module.exports=(req,callback)=>{
+
+const mod={};
+
+mod.notFound=(req,callback)=>{
     callback(404,{
         message:"Page Not Found",
     })
 }
+
+module.exports=mod;

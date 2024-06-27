@@ -6,8 +6,8 @@
 *
 */
 // Dependencies
-const about = require("./about");
-const notFound = require("./notFound");
+const { about } = require("./about");
+const { notFound } = require("./notFound");
 
 
 
