@@ -1,0 +1,14 @@
+{
+  "name": "generalized rock-paper-scissors game using-package",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "inquirer": "^10.2.2"
+  }
+}
