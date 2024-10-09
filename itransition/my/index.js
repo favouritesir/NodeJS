@@ -12,7 +12,6 @@
 
 /************************************************************************ DEPENDENCIES */
 const crypto = require('crypto'); // to generate hmac and key
-const { title } = require('process');
 const readline = require('readline');
 
 
@@ -74,8 +73,6 @@ app.option = {
         even:0,
         odd:1,
     },
-    resetInput:false,       // reset userMoveIndex or not
-    msgMode:false,          // message is showing or not
     selector:['x','>',' '], // exit,select,other
     helpIcon:'?',           // help menu icon
 }
@@ -239,8 +236,8 @@ app.handle =()=>
         if (s?.match(/[0-9\?]/g)) app.handleOption(s);
         else if (key.name === "up" || key.name === "down") app.handleArrow(key.name);
         else if (key.name === "return") app.handleEnter();
-        else if (key.name === "backspace" || key.name === "escape") app.resetGame();
-        else app.gameScreen();       
+        else if (key.name === "backspace" || key.name === "escape") app.resetGame(); 
+        else app.gameScreen();
     });
 }
 
